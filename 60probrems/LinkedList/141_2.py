@@ -17,13 +17,13 @@ class Solution:
                 return False
             slow = slow.next
             fast = fast.next.next
-            print(slow, fast)
+            print(slow, fast) # slowとfastの遷移を確認
         return True # slowとheadが同じノードに到達すればループ
 
-# head = [3,2,0,-4]
-pos = 1 # posはパラメータではなく、最後の要素がどこに戻るかを示す。（この場合、最後の-4は１番目の要素の2に戻る）
+# data = [3,2,0,-4]
+# pos = 1 # posはパラメータではなく、最後の要素がどこに戻るかを示す。（この場合、最後の-4は１番目の要素の2に戻る）
 
-# 循環ex
+# 循環する連結リストの作成方法１
 links = ListNode(3)
 # print(vars(links))
 links.next = ListNode(2)
@@ -43,8 +43,30 @@ links.next.next.next.next = links.next # 2に戻る(循環させる)
 # print(links)
 # print(links.next)
 
+
+# 循環する連結リストの作成方法2
+data = [3,2,0,-4]
+# pos = 1 # posはパラメータではなく、最後の要素がどこに戻るかを示す。（この場合、最後の-4は１番目の要素の2に戻る）
+
+# ループで連結リストを作成
+tail = head = ListNode(data[0])
+for i in data[1:]:
+    tail.next = ListNode(i) # アドレスは１回目でhead.next、２回目でhead.next.next,3回目でhead.next.next.next
+    tail = tail.next
+
+head.next.next.next.next = head.next
+
+# # 確認
+# print(vars(head))
+# print(vars(head.next))
+# print(vars(head.next.next))
+# print(vars(head.next.next.next))
+# print(vars(head.next.next.next.next))
+
 obj = Solution()
-print(obj.hasCycle(links))
+# print(obj.hasCycle(links))
+print(obj.hasCycle(head))
+
 # 遷移の確認
 # slow(一個一個進む)：3,2,0,-4
 # fast（一つとばし）: 2,-4,0 (2,-4,0でループより)

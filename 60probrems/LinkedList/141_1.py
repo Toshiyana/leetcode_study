@@ -1,11 +1,11 @@
-# HashSet（辞書）を利用
+# HashTable, HashSetを利用
 
 class ListNode(object):
     def __init__(self, x):
         self.val = x
         self.next = None
 
-# # 辞書を利用したパターン
+# # Table(辞書)を利用したパターン
 # class Solution:
 #     def hasCycle(self, head: ListNode) -> bool:
 #         dictionary = {}
@@ -18,7 +18,7 @@ class ListNode(object):
 #             head = head.next
 #         return False
 
-# 集合を利用したパターン
+# set(集合)を利用したパターン
 class Solution:
   def hasCycle(self, head):
     seen = set()
