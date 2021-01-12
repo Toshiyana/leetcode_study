@@ -1,3 +1,5 @@
+import collections
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -5,9 +7,8 @@ class TreeNode:
         self.left = left
         self.right = right
 
-# BFS (Breadth First Search)
 class Solution:
-    def maxDepth(self, root: TreeNode) -> int:
+    def minDepth(self, root: TreeNode) -> int:
         depth = 0
         level = [root] if root else []
         while level:
@@ -17,6 +18,8 @@ class Solution:
             # print("level:", level)
             for el in level:
                 # print("el:", vars(el))
+                if not el.left and not el.right: # maxDepthとは違い，minDepthなので，Noneとなった時点でdepthを返す
+                    return depth
                 if el.left:
                     queue.append(el.left)
                 if el.right:

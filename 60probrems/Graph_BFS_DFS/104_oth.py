@@ -5,6 +5,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+# DFS (Depth First Search)
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         # print(vars(root))
