@@ -5,15 +5,15 @@ class Solution:
 
         curSum = maxSum = nums[0]
         for num in nums[1:]:
-            print("num: {}, curSum+num: {} + {} = {}".format(num, curSum, num, curSum+num))
+            # print("num: {}, curSum+num: {} + {} = {}".format(num, curSum, num, curSum+num))
             curSum = max(num, curSum + num)
-            print("curSum:", curSum)
+            # print("curSum:", curSum)
 
-            print("maxSum: {}, curSum: {}".format(maxSum, curSum))
+            # print("maxSum: {}, curSum: {}".format(maxSum, curSum))
             maxSum = max(maxSum, curSum)
-            print("maxSum:", maxSum)
+            # print("maxSum:", maxSum)
 
-            print("")
+            # print("")
 
         return maxSum
 
