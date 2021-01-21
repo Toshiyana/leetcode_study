@@ -1,0 +1,6 @@
+Solution 1 balances time/space well, i.e., O(n + m) time/space, but the sorting approach (solution 4) would be a good option if you want to optimize on space vs time. This is a situation where you want to have a conversation with the interviewer and ask them what is the most important (time/space) to demonstrate that you really understand the problem and realize that in some instances a worse time complexity might be "better" if space is limited.
+
+Solution 1: O(m+n) time/space where n = len(nums1), m = len(nums2)
+Solution 2: O(m * n) time O(1) Space (we don't consider res in the space complexity). Note, this solution is slightly worse than O(m*n) because we keep checking the res array to prevent adding duplicates. It'd be better to make res a set() instead of list.
+Solution 3: O(m + n) Time and O(n) Space where n = len(nums1), m = len(nums2)
+Solution 4: O(nlogn + mlogm) Time and O(1) Space.
