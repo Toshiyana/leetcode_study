@@ -2,7 +2,7 @@ import math
 # combination
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        if n__ot m or not n:
+        if not m or not n:
             return 0
         return self.combinations_count(m-1, n-1)
 
