@@ -13,7 +13,7 @@ class KthLargest:
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
 
-obj = KthLargest(3, [4,5,8,2])
+# obj = KthLargest(3, [4,5,8,2])
 print(obj.add(3))
 print(obj.add(5))
 print(obj.add(10))
