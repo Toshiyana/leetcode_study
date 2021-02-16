@@ -1,4 +1,4 @@
-## BFS, correct
+# BFS, correct
 
 from typing import List
 
